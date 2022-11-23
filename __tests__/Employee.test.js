@@ -31,3 +31,21 @@ describe("Employee class getId method", () => {
     expect(employee.id).toEqual(id);
   });
 });
+
+describe("Employee class getEmail method", () => {
+  it("Grabs and returns the employee email", () => {
+    let email = "darthvader@sithlord.com";
+    const employee = new Employee(email);
+
+    expect(employee.email).toEqual(email);
+  });
+});
+
+describe("Employee class getRole method", () => {
+  it("Grabs and returns the employee role", () => {
+    let role = "Employee";
+    const employee = new Employee(role);
+
+    expect(employee.role).toEqual(role);
+  });
+});
