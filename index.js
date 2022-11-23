@@ -97,6 +97,38 @@ function createEngineer() {
   });
 }
 
+function createIntern() {
+  inquirer
+  .prompt([
+  {
+      type: 'input',
+      message: 'What is the intern\'s name?',
+      name: 'intern_name'
+  },
+  {
+      type: 'input',
+      message: 'What is the intern\'s id?',
+      name: 'intern_id'
+  },
+  {
+      type: 'input',
+      message: 'What is the intern\'s email?',
+      name: 'intern_email'
+  },
+  {
+      type: 'input',
+      message: 'What is the intern\'s school?',
+      name: 'intern_school'
+  }
+  ])
+  .then((answers) => {
+      const intern = new Intern(answers.intern_name, answers.intern_id, answers.intern_email, answers.intern_school);
+      teamMembers.push(intern);
+      createTeam();
+  });
+}
+
+
 // function for creating manager - inquirer questions
   // take those questions and create a new Manager with the user provided answers
   // push that new Manager to the team members array
