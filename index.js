@@ -66,6 +66,37 @@ function createTeam() {
   });
 }
 
+function createEngineer() {
+  inquirer
+  .prompt([
+  {
+      type: 'input',
+      message: 'What is the engineer\'s name?',
+      name: 'engineer_name'
+  },
+  {
+      type: 'input',
+      message: 'What is the engineer\'s id?',
+      name: 'engineer_id'
+  },
+  {
+      type: 'input',
+      message: 'What is the engineer\'s email?',
+      name: 'engineer_email'
+  },
+  {
+      type: 'input',
+      message: 'What is the engineer\'s GitHub username?',
+      name: 'engineer_github'
+  }
+  ])
+  .then((answers) => {
+      const engineer = new Engineer(answers.engineer_name, answers.engineer_id, answers.engineer_email, answers.engineer_github);
+      teamMembers.push(engineer);
+      createTeam();
+  });
+}
+
 // function for creating manager - inquirer questions
   // take those questions and create a new Manager with the user provided answers
   // push that new Manager to the team members array
