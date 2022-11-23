@@ -45,6 +45,26 @@ function createManager() {
   });
 }
 
+function createTeam() {
+  inquirer
+  .prompt([
+  {
+      type: 'list',
+      message: 'Which type of team member would you like to add?',
+      name: 'team_member',
+      choices: ['Engineer', 'Intern', 'I don\'t want to add any more team members']
+  }
+  ])
+  .then((answers) => {
+      if (answers.team_member === 'Engineer') {
+          createEngineer();
+      } else if (answers.team_member === 'Intern') {
+          createIntern();
+      } else {
+          buildTeam();
+      }
+  });
+}
 
 // function for creating manager - inquirer questions
   // take those questions and create a new Manager with the user provided answers
