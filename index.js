@@ -12,6 +12,39 @@ const render = require('./src/page-template.js');
 
 const teamMembers = [];
 
+function createManager() {
+  inquirer
+  .prompt([
+  {
+      type: 'input',
+      message: 'What is the name of the team manager?',
+      name: 'manager_name'
+  },
+  { 
+
+      type: 'input',
+      message: 'What is the manager\'s id?',
+      name: 'manager_id'
+  },
+  {
+      type: 'input',
+      message: 'What is the manager\'s email?',
+      name: 'manager_email'
+  },
+  {
+
+      type: 'input',
+      message: 'What is the manager\'s office number?',
+      name: 'manager_office'
+  }
+  ])
+  .then((answers) => {
+      const manager = new Manager(answers.manager_name, answers.manager_id, answers.manager_email, answers.manager_office);
+      teamMembers.push(manager);
+      createTeam();
+  });
+}
+
 
 // function for creating manager - inquirer questions
   // take those questions and create a new Manager with the user provided answers
