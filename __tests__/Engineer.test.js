@@ -1,6 +1,6 @@
 // // Require the employee class
-const Employee = require("./Employee");
-const Engineer = require("./Engineer");
+const Employee = require("../lib/Employee");
+const Engineer = require("../lib/Engineer");
 
 // Test for the whole engineer object
 describe("Engineer class", () => {
@@ -17,30 +17,29 @@ describe("Engineer class", () => {
     expect(engineer.id).toEqual(id);
     expect(engineer.email).toEqual(email);
     expect(engineer.github).toEqual(github);
-    });
-    });
+  });
+});
 
 // Test for the getGithub method
 describe("Engineer class getGithub method", () => {
-    it("Grabs and returns the engineer github", () => {
+  it("Grabs and returns the engineer github", () => {
     // Create a variable for the github
-        let github = "theOfficialSithLordVader";
+    let github = "theOfficialSithLordVader";
     // Create a new engineer object with the variable
-        const engineer = new Engineer(github);
-        // Test to see if the engineer object has the correct github
-        expect(engineer.github).toEqual(github);
-    });
+    const engineer = new Engineer(github);
+    // Test to see if the engineer object has the correct github
+    expect(engineer.github).toEqual(github);
+  });
 });
 
 // Test for the getRole method
 describe("Engineer class getRole method", () => {
-    it("Grabs and returns the engineer role", () => {
+  it("Grabs and returns the engineer role", () => {
     // Create a variable for the role
-        let role = "Engineer";
+    let role = "Engineer";
     // Create a new engineer object with the variable
-        const engineer = new Engineer(role);
-        // Test to see if the engineer object has the correct role
-        expect(engineer.role).toEqual(role);
-    });
-}
-);
+    const engineer = new Engineer(role);
+    // Test to see if the engineer object has the correct role
+    expect(engineer.role).toEqual(role);
+  });
+});

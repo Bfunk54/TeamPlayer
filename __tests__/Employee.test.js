@@ -1,5 +1,5 @@
 // Require the employee class
-const Employee = require("./Employee");
+const Employee = require("../lib/Employee");
 
 // Test for the whole employee object
 describe("Employee class", () => {

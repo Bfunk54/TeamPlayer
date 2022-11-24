@@ -1,6 +1,6 @@
 // // Require the employee class
-const Employee = require("./Employee");
-const Manager = require("./Manager");
+const Employee = require("../lib/Employee");
+const Manager = require("../lib/Manager");
 
 // Test for the whole manager object
 describe("Manager class", () => {
