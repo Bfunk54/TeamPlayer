@@ -9,7 +9,7 @@ const DIST_DIR = path.resolve(__dirname, "dist");
 const distPath = path.join(DIST_DIR, "team.html");
 
 const render = require("./src/page-template");
-const Reset = require("./reset");
+const reset = require("./reset");
 
 const teamMembers = [];
 
@@ -69,7 +69,7 @@ function createTeam() {
       } else if (answers.team_member === "Intern") {
         createIntern();
       } else {
-        finishTeam();
+        end();
       }
     });
 }
@@ -151,7 +151,7 @@ function end() {
       .prompt([
         {
           type: "list",
-          message: "Would you like to finish or reset and resart?",
+          message: "Would you like to finish and view your team or reset and resart?",
           name: "end",
           choices: [
             "End",
