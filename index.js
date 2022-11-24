@@ -9,6 +9,7 @@ const DIST_DIR = path.resolve(__dirname, "dist");
 const distPath = path.join(DIST_DIR, "team.html");
 
 const render = require("./src/page-template");
+const Reset = require("./reset");
 
 const teamMembers = [];
 
@@ -144,6 +145,30 @@ function createIntern() {
       createTeam();
     });
 }
+
+function end() {
+    inquirer
+      .prompt([
+        {
+          type: "list",
+          message: "Would you like to finish or reset and resart?",
+          name: "end",
+          choices: [
+            "End",
+            "Reset/Restart",
+          ],
+        },
+      ])
+      .then((answers) => {
+        if (answers.end === "End") {
+          finishTeam();
+        } else if (answers.end === "Reset/Restart") {
+          reset();
+        } else {
+          finishTeam();
+        }
+      });
+  }
 
 function finishTeam() {
   if (!fs.existsSync(DIST_DIR)) {
