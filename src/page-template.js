@@ -3,14 +3,15 @@ const makeTeam = (team) => {
   const makeManager = (manager) => {
     // return a template literal with a div for the manager
     return `
-        <div> 
-        <h2>${manager.getName()}</h2>
-        <h5> Manager </h5>
-        <div col>
-        <div row> <p> ID: ${manager.getId()}</p> </div>
-        <div row> <p> Email: ${manager.getEmail()}</p> </div>
-        <div row> <p> Office Number: ${manager.getOfficeNumber()}</p> </div>
+        <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">${manager.getName()}</span>
+          <h6> Manager </h6>
+          <p> ID: ${manager.getId()}</p>
+          <p> Email: ${manager.getEmail()}</p>
+          <p> Office Number: ${manager.getOfficeNumber()}</p>
         </div>
+      </div>
         `;
   };
 
@@ -18,14 +19,15 @@ const makeTeam = (team) => {
   const makeEngineer = (engineer) => {
     // make a div for the engineer
     return `
-        <div> 
-        <h2>${engineer.getName()}</h2>
-        <h5> Engineer </h5>
-        <div col>
-        <div row> <p> ID: ${engineer.getId()}</p> </div>
-        <div row> <p> Email: ${engineer.getEmail()}</p> </div>
-        <div row> <p> Github: https://www.github.com/${engineer.getGithub()}</p> </div>
+        <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">${engineer.getName()}</span>
+          <h6> Engineer </h6>
+          <p> ID: ${engineer.getId()}</p>
+          <p> Email: ${engineer.getEmail()}</p>
+          <p> Github: https://www.github.com/${engineer.getGithub()}</p>
         </div>
+      </div>
         `;
   };
 
@@ -33,14 +35,15 @@ const makeTeam = (team) => {
   const makeIntern = (intern) => {
     // make a div for the intern
     return `
-        <div> 
-        <h2>${intern.getName()}</h2>
-        <h5> Intern </h5>
-        <div col>
-        <div row> <p> ID: ${intern.getId()}</p> </div>
-        <div row> <p> Email: ${intern.getEmail()}</p> </div>
-        <div row> <p> School: ${intern.getSchool()}</p> </div>
+        <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">${intern.getName()}</span>
+          <h6> Intern </h6>
+          <p> ID: ${intern.getId()}</p>
+          <p> Email: ${intern.getEmail()}</p>
+          <p> School: ${intern.getSchool()}</p>
         </div>
+      </div>
         `;
   };
 
