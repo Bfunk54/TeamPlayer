@@ -18,30 +18,30 @@ function createManager() {
       {
         type: "input",
         message: "What is the name of the team manager?",
-        name: "manager_name",
+        name: "name",
       },
       {
         type: "input",
         message: "What is the manager's id?",
-        name: "manager_id",
+        name: "id",
       },
       {
         type: "input",
         message: "What is the manager's email?",
-        name: "manager_email",
+        name: "email",
       },
       {
         type: "input",
         message: "What is the manager's office number?",
-        name: "manager_office",
+        name: "officeNumber",
       },
     ])
     .then((answers) => {
       const manager = new Manager(
-        answers.manager_name,
-        answers.manager_id,
-        answers.manager_email,
-        answers.manager_office
+        answers.name,
+        answers.id,
+        answers.email,
+        answers.officeNumber
       );
       teamMembers.push(manager);
       createTeam();
@@ -79,30 +79,30 @@ function createEngineer() {
       {
         type: "input",
         message: "What is the engineer's name?",
-        name: "engineer_name",
+        name: "name",
       },
       {
         type: "input",
         message: "What is the engineer's id?",
-        name: "engineer_id",
+        name: "id",
       },
       {
         type: "input",
         message: "What is the engineer's email?",
-        name: "engineer_email",
+        name: "email",
       },
       {
         type: "input",
         message: "What is the engineer's GitHub username?",
-        name: "engineer_github",
+        name: "github",
       },
     ])
     .then((answers) => {
       const engineer = new Engineer(
-        answers.engineer_name,
-        answers.engineer_id,
-        answers.engineer_email,
-        answers.engineer_github
+        answers.name,
+        answers.id,
+        answers.email,
+        answers.github
       );
       teamMembers.push(engineer);
       createTeam();
