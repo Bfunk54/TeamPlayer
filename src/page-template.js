@@ -24,7 +24,7 @@ const makeTeam = (team) => {
         <div col>
         <div row> <p> ID: ${engineer.getId()}</p> </div>
         <div row> <p> Email: ${engineer.getEmail()}</p> </div>
-        <div row> <p> Github: https://github.com/${engineer.getGithub()}</p> </div>
+        <div row> <p> Github: https://www.github.com/${engineer.getGithub()}</p> </div>
         </div>
         `;
   };
@@ -69,7 +69,7 @@ const makeTeam = (team) => {
         break;
     }
   }
-  return html;
+  return html.join("");
 };
 
 module.exports = (team) => {
