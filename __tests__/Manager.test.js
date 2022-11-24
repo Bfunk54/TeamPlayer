@@ -26,11 +26,11 @@ describe("Manager class getOfficeNumber method", () => {
     let officeNumber = 999;
     // Create a new manager object with the variable
     const manager = new Manager(
-        "Darth",
-        999,
-        "darthvader@sithlord.com",
-        officeNumber
-      );
+      "Darth",
+      999,
+      "darthvader@sithlord.com",
+      officeNumber
+    );
     // Test to see if the manager object has the correct office number
     expect(manager.officeNumber).toEqual(officeNumber);
   });
@@ -38,11 +38,11 @@ describe("Manager class getOfficeNumber method", () => {
 
 // Test for the getRole method
 describe("Manager class getRole method", () => {
-    it("Grabs and returns the manager role", () => {
-      // Create a variable for the role
-      let role = "Manager";
-      // Just test to see if the manager object has the correct role
-      // We are just returning a string so we don't need to create a new manager object
-      expect(role).toEqual(role);
-    });
+  it("Grabs and returns the manager role", () => {
+    // Create a variable for the role
+    let role = "Manager";
+    // Just test to see if the manager object has the correct role
+    // We are just returning a string so we don't need to create a new manager object
+    expect(role).toEqual(role);
   });
+});
