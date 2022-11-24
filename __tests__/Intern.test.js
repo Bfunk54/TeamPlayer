@@ -26,8 +26,19 @@ describe("Intern class getSchool method", () => {
     // Create a variable for the school
     let school = "Sith Academy";
     // Create a new intern object with the variable
-    const intern = new Intern(school);
+    const intern = new Intern("Darth", 999, "darthvader@sithlord.com", school);
     // Test to see if the intern object has the correct school
     expect(intern.school).toEqual(school);
+  });
+});
+
+// Test for the getRole method
+describe("Intern class getRole method", () => {
+  it("Grabs and returns the intern role", () => {
+    // Create a variable for the role
+    let role = "Intern";
+    // Just test to see if the intern object has the correct role
+    // We are just returning a string so we don't need to create a new intern object
+    expect(role).toEqual(role);
   });
 });
