@@ -69,7 +69,7 @@ function createTeam() {
       } else if (answers.team_member === "Intern") {
         createIntern();
       } else {
-        end();
+        finishTeam();
       }
     });
 }
@@ -164,8 +164,7 @@ function end() {
           finishTeam();
         } else if (answers.end === "Reset/Restart") {
           reset();
-        } else {
-          finishTeam();
+          createManager();
         }
       });
   }
@@ -175,6 +174,7 @@ function finishTeam() {
     fs.mkdirSync(DIST_DIR);
   }
   fs.writeFileSync(distPath, render(teamMembers), "utf-8");
+  end();
 }
 
 createManager();
