@@ -55,4 +55,8 @@ Email me with any questions: ben_fein@icloud.com
 
 ## Link to the site:
 [Github Repo](https://github.com/Bfunk54/TeamPlayer)
+#
+[Team Player Demo](https://bfunk54.github.io/TeamPlayer/)
+#
+[Team Player Video Walkthrough](https://drive.google.com/file/d/1ziJyhVpK8uvnQthXstopClxPm_XEhSDf/view?usp=sharing)
 <p align="right">(<a href="#mit-license">back to top</a>)</p>
