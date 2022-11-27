@@ -1,3 +1,4 @@
+// function to hold the whole team
 const makeTeam = (team) => {
   // create the manager html
   const makeManager = (manager) => {
@@ -52,15 +53,12 @@ const makeTeam = (team) => {
 
   // loop through the team array
   for (let i = 0; i < team.length; i++) {
-    console.log(team[i].getRole());
     //Switch statement to determine which type of employee is being added
     switch (true) {
       case team[i].getRole() === "Manager":
-        console.log("Manager is happening");
         html.push(makeManager(team[i]));
         break;
       case team[i].getRole() === "Engineer":
-        console.log("Engineer is happening");
         html.push(makeEngineer(team[i]));
         break;
       case team[i].getRole() === "Intern":

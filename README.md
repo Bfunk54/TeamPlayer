@@ -43,7 +43,8 @@ To test, use the usage instructions and check the html file to verify all data i
 <p align="right">(<a href="#mit-license">back to top</a>)</p>
 
 ## Screenshots
-![]()
+![](./dist/images/teamplayer1.png)
+![](./dist/images/teamplayer2.png)
 <p align="right">(<a href="mit-license">back to top</a>)</p>
 
 ## Questions
@@ -53,6 +54,5 @@ Email me with any questions: ben_fein@icloud.com
 <p align="right">(<a href="#mit-license">back to top</a>)</p>
 
 ## Link to the site:
-[Team Player]()
-[Github Repo]()
+[Github Repo](https://github.com/Bfunk54/TeamPlayer)
 <p align="right">(<a href="#mit-license">back to top</a>)</p>
