@@ -161,7 +161,7 @@ function end() {
       ])
       .then((answers) => {
         if (answers.end === "End") {
-          finishTeam();
+          console.log("Thank you for using Team Player!");
         } else if (answers.end === "Reset/Restart") {
           reset();
           createManager();

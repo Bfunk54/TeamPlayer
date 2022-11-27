@@ -49,8 +49,6 @@ const makeTeam = (team) => {
 
   // use the team array to generate pieces of html based on the employee role
   const html = [];
-  console.log(html);
-  console.log(team);
 
   // loop through the team array
   for (let i = 0; i < team.length; i++) {
@@ -59,12 +57,10 @@ const makeTeam = (team) => {
     switch (true) {
       case team[i].getRole() === "Manager":
         console.log("Manager is happening");
-        console.log(makeManager(team[i]));
         html.push(makeManager(team[i]));
         break;
       case team[i].getRole() === "Engineer":
         console.log("Engineer is happening");
-        console.log(makeEngineer(team[i]));
         html.push(makeEngineer(team[i]));
         break;
       case team[i].getRole() === "Intern":
